@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>macQR</string>
+	<key>CFBundleIdentifier</key>
+	<string>macQR</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>macQR</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<!-- 应用图标 -->
+	<key>CFBundleIconFile</key>
+	<string>macQR.icns</string>
+	<!-- 通知样式配置 -->
+	<key>NSUserNotificationAlertStyle</key>
+	<string>alert</string>
+	<!-- 通知权限描述 -->
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>macQR需要发送通知来提醒您二维码识别结果</string>
+	<!-- 应用不显示在程序坞中 -->
+	<key>LSUIElement</key>
+	<true/>
+</dict>
+</plist>
