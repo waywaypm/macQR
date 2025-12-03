@@ -117,6 +117,55 @@ A: 请检查以下几点：
 
 A: 目前 macQR 不支持自动更新，请定期访问 GitHub Release 页面下载最新版本的 DMG 文件进行手动更新。
 
+### Q: 打开应用时提示"macQR.app 已损坏，无法打开"或"来自身份不明开发者"
+
+A: 这是因为应用未经过 Apple Developer ID 签名，macOS 的 Gatekeeper 安全机制默认阻止未签名应用运行。您可以通过以下方法解决：
+
+#### 方法一：单次打开（推荐用于首次尝试）
+1. 在 Finder 中找到 `macQR.app`（通常在 Applications 文件夹中）
+2. 按住 `Control` 键，同时点击应用图标
+3. 在弹出的菜单中选择 "打开"
+4. 在出现的警告窗口中，点击 "打开" 按钮
+
+#### 方法二：永久允许所有来源应用
+注意：此方法会降低系统安全性，请谨慎使用！
+1. 打开 "终端" 应用（位于 Applications > Utilities 文件夹中）
+2. 执行以下命令：
+   ```bash
+   sudo spctl --master-disable
+   ```
+3. 输入您的 macOS 登录密码（密码不会显示在终端中）
+4. 按回车键执行命令
+5. 前往 "系统设置" > "隐私与安全性"，您会看到 "允许从以下位置下载的 App" 选项已变为 "任何来源"
+6. 现在可以正常打开 macQR 应用了
+
+#### 方法三：移除隔离属性
+1. 打开 "终端" 应用
+2. 执行以下命令，将 `/Applications/macQR.app` 替换为实际的应用路径：
+   ```bash
+   xattr -rd com.apple.quarantine /Applications/macQR.app
+   ```
+3. 按回车键执行命令
+4. 现在可以正常打开 macQR 应用了
+
+### Q: 没有 Apple Developer ID 可以开发让别人使用的软件吗？
+
+A: 是的，您可以在没有 Apple Developer ID 的情况下开发和分发 macOS 软件，只是需要用户按照上述方法手动允许应用运行。
+
+#### 无 Apple Developer ID 开发注意事项：
+1. 应用无法通过 Mac App Store 分发
+2. 无法使用某些高级系统功能（如 Push Notifications、iCloud 等）
+3. 用户需要手动绕过 Gatekeeper 安全机制才能运行应用
+4. 无法获得 Apple 的技术支持和测试工具
+5. 应用图标上不会显示 Apple 认证的 "已验证开发者" 标识
+
+#### 开发流程建议：
+1. 按照正常流程开发和构建应用
+2. 打包成 DMG 文件便于用户安装
+3. 在 README 中详细说明未签名应用的打开方法
+4. 建议用户使用 "Control + 点击" 或 "移除隔离属性" 的方法打开应用
+5. 考虑加入自动更新机制，方便用户获取最新版本
+
 ## 贡献指南
 
 欢迎对 macQR 进行贡献！无论是 bug 报告、功能建议还是代码贡献，我们都非常欢迎。
