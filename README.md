@@ -197,22 +197,8 @@ A: 是的，您可以在没有 Apple Developer ID 的情况下开发和分发 ma
 2. 功能测试通过
 3. 没有明显的性能问题
 
-## 技术栈
 
-- **开发语言**：Swift 5.9+
-- **UI 框架**：SwiftUI
-- **二维码识别**：Vision 框架
-- **构建工具**：Swift Package Manager
-- **开发环境**：macOS 13.0+
 
-## 许可证
-
-macQR 采用 MIT 许可证，详见 [LICENSE](LICENSE) 文件。
-
-## 联系方式
-
-- **GitHub**：[https://github.com/yourusername/macQR](https://github.com/yourusername/macQR)
-- **Issue 报告**：[https://github.com/yourusername/macQR/issues](https://github.com/yourusername/macQR/issues)
 
 ## 版本历史
 
