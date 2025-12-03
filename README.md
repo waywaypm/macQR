@@ -213,7 +213,6 @@ macQR 采用 MIT 许可证，详见 [LICENSE](LICENSE) 文件。
 
 - **GitHub**：[https://github.com/yourusername/macQR](https://github.com/yourusername/macQR)
 - **Issue 报告**：[https://github.com/yourusername/macQR/issues](https://github.com/yourusername/macQR/issues)
-- **电子邮件**：your-email@example.com
 
 ## 版本历史
 
