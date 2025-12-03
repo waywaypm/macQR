@@ -18,7 +18,7 @@ macQR 是一款基于 macOS 平台的智能二维码识别工具，通过状态�
 
 ### 方法一：使用 DMG 安装包（推荐）
 
-1. 从 [GitHub Release](https://github.com/yourusername/macQR/releases/latest) 页面下载最新版本的 `macQR.dmg` 文件
+1. 从 [GitHub Release](https://github.com/waywaypm/macQR/releases) 页面下载最新版本的 `macQR.dmg` 文件
 2. 打开 DMG 文件
 3. 将 `macQR.app` 拖放到 `Applications` 文件夹
 4. 从 Launchpad 或 Applications 文件夹中打开应用
